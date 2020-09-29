@@ -1,0 +1,181 @@
+#
+
+# dein.toml から移動してきた
+[[plugins]]
+repo = 'https://github.com/dense-analysis/ale'
+hook_source = '''
+source ~/.config/nvim/plugins/ale.vim
+'''
+on_ft=['python']
+
+
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo='deoplete-plugins/deoplete-zsh'
+on_ft = 'zsh'
+
+
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'bps/vim-textobj-python'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex','cls']
+hook_source= '''
+source ~/.config/nvim/plugins/vimtex.vim
+'''
+
+
+#ここを参考https://qiita.com/alpaca_taichou/items/056a4c42fe7a928973e6
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html','htm','md','markdown']
+hook_source = '''
+source ~/.config/nvim/plugins/emmet.vim
+'''
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_ft = ['c','cpp','python','tex','latex']
+
+
+[[plugins]]
+repo = 'https://github.com/hail2u/vim-css3-syntax'
+on_ft = ['html','htm']
+
+[[plugins]]
+repo = 'https://github.com/pangloss/vim-javascript'
+on_ft = ['html','htm']
+
+[[plugins]]
+repo = 'https://github.com/kchmck/vim-coffee-script'
+on_ft = ['html','htm']
+
+[[plugins]]
+repo = 'https://github.com/AtsushiM/sass-compile.vim'
+on_ft = ['sass','scss','css']
+hook_add = '''
+ let g:sass_compile_auto                 = 1
+ let g:sass_compile_cdloop               = 5
+ let g:sass_compile_cssdir               = ['css', 'stylesheet']
+ let g:sass_compile_file                 = ['scss', 'sass']
+ let g:sass_started_dirs                 = []
+ let g:sass_compile_beforecmd            = ''
+ autocmd FileType less,sass  setlocal sw = 2 sts=2 ts=2 et
+'''
+depends = ['search-parent']
+
+[[plugins]]
+repo = 'AtsushiM/search-parent.vim'
+on_ft = ['sass','scss','css']
+
+[[plugins]]
+repo = 'https://github.com/akiyan/vim-textobj-php'
+on_ft = ['html','htm']
+
+[[plugins]]
+repo = 'https://github.com/tpope/vim-surround'
+on_ft = ['html','htm']
+
+[[plugins]]
+repo = 'https://github.com/ap/vim-css-color'
+on_ft = ['html','htm', 'vim']
+
+[[plugins]]
+repo = 'https://github.com/cakebaker/scss-syntax.vim'
+on_ft = ['html','htm']
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+on_ft = ['md']
+
+[[plugins]]
+repo = 'wokalski/autocomplete-flow'
+on_ft = ['html', 'htm', 'js']
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'js'
+
+[[plugins]]
+repo = 'https://github.com/zeekay/vim-beautify'
+on_ft = ['html', 'htm', 'js']
+
+[[plugins]]
+repo='maksimr/vim-jsbeautify'
+on_ft=['js', 'html', 'jsx', 'json', 'css']
+hook_source = '''
+source ~/.config/nvim/plugins/vim-jsbeautify.vim
+'''
+
+
+[[plugins]]
+repo = 'https://github.com/AtsushiM/sass-compile.vim'
+on_ft = ['sass','scss']
+hook_source = '''
+source ~/.config/nvim/plugins/sass-compile.vim
+'''
+
+[[plugins]]
+repo = 'https://github.com/qnighy/satysfi.vim'
+on_ft = ['satysfi','saty']
+
+[[plugins]]
+repo = 'https://github.com/fatih/vim-go'
+on_ft = ['go']
+hook_add = '''
+source ~/.config/nvim/plugins/vim-go.vim
+'''
+
+[[plugins]]
+repo = 'https://github.com/plasticboy/vim-markdown.git'
+on_ft = ['markdown']
+hook_source = '''
+source ~/.config/nvim/plugins/vim-markdown.vim
+'''
+ 
+#=====================
+[[plugins]]
+repo='Shougo/neoinclude.vim'
+on_ft = ['c', 'cpp']
+depends=['deoplete.nvim']
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-jedi'
+on_ft = 'python'
+depends = ['deoplete.nvim']
+hook_source = 'source ~/.config/nvim/plugins/deoplete-jedi.vim'
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
+hook_source = 'source ~/.config/nvim/plugins/jedi-vim.vim'
+
+# [[plugins]]
+# repo = 'zchee/deoplete-clang'
+# on_ft = ['c', 'cpp', 'cmake']
+# hook_source='source ~/.config/nvim/plugins/deoplete-clang.vim'
+# depends=['deoplete.nvim']
+
+# [[plugins]]
+# repo = 'Shougo/deoplete-clangx'
+# hook_source = '''
+# " Change clang binary path
+# call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
+
+# " Change clang options
+# call deoplete#custom#var('clangx', 'default_c_options', '')
+# call deoplete#custom#var('clangx', 'default_cpp_options', '')
+# '''
+# on_ft = ['c','cpp']

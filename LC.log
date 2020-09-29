@@ -1,0 +1,6 @@
+#######
+LanguageClient 0.1.156 
+#######
+18:54:34 WARN unnamed src/language_server_protocol.rs:975 Failed to get initializationOptions: EOF while parsing a value at line 1 column 0
+18:54:34 WARN unnamed src/language_server_protocol.rs:3201 Failed to get workspace settings: EOF while parsing a value at line 1 column 0
+18:54:34 WARN unnamed src/language_server_protocol.rs:2389 Failed to start language server automatically. Error: Failure { jsonrpc: Some(V2), error: Error { code: MethodNotFound, message: "method not found", data: None }, id: Num(2) }

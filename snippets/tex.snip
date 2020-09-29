@@ -1,0 +1,68 @@
+snippet     eqnonumber
+options     head
+    \[
+        ${1:TARGET}
+    \]${0:TARGET}
+
+
+snippet     \sum
+alias       sum \sum{
+    \sum_{${1:TARGET}}^{${2:TARGET}} ${3:TARGET}
+
+snippet     \mathrm
+alias       matrm \mathrm{
+# options     word
+    \mathrm{${1:TARGET}}${0:TARGET}
+
+snippet     \intInf
+alias       intInf \intImf{
+abbr        integralInf2Inf
+# options     word
+    \int_{\infty}^{\infty} ${1:TARGET}
+
+snippet     \int
+alias       int \int_
+abbr        integrarl
+# options     word
+    \int_{${1:TARGET}}^{${2:TARGET}} ${0:TARGET}
+
+snippet     pack1
+abbr        package set 1
+# options     head
+    \usepackage{graphics}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{ascmac}
+    \usepackage{txfonts}
+    \usepackage{url}
+    \usepackage{bm}
+    \usepackage{documute}
+    \usepackage{tikz}
+    \usetikzlibrary{calc}
+    \usetikzlibrary{intersections}
+    ${0:TARGET}
+
+
+snippet     pack2
+abbr        package set 2
+    \usepackage[dvipdfmx]{hyperref}
+    \usepackage{pxjahyper}
+    ${0:TARGET}
+
+
+snippet     lstlsting
+abbr        Use listing
+options     head
+  \usepackage{listings, jlisting}
+  \lstset{
+      language = Python, 
+      breaklines = true, 
+      classoffset = 0, 
+      framesep = 5pt, 
+      numbers = left, 
+      stepnumber =1, 
+      tabsize = 4, 
+      frame = tlrb, 
+      keywordstyle = \ttfamily, 
+  }
+  ${0:TARGET}

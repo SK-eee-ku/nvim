@@ -1,0 +1,23 @@
+#
+#
+
+[[plugins]]
+repo = 'JuliaEditorSupport/julia-vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline.git'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+source ~/.config/nvim/plugins/airline.vim
+'''
+
+[[plugins]]
+repo = 'davidhalter/jedi'
+on_ft = 'python'
+
+[[plugins]]
+repo = 'https://github.com/woodyZootopia/gitsession.nvim'
+
+
+
