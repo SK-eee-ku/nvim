@@ -61,7 +61,7 @@ set sessionoptions-=buffers
 set encoding=utf-8 fileencodings=utf-8,ios-2022-jp,euc-jp,sjis,cp932
 
 " use gui colors
-set termguicolors
+" set termguicolors
 
 " assign temporary file
 set backupdir=~/.config/nvim/tmp//
