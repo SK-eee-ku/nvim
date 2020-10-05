@@ -39,11 +39,11 @@ repo = 'Shougo/neoyank.vim'
 [[plugins]]
 repo = 'neoclide/denite-git'
 
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-source ~/.config/nvim/plugins/indentline.vim
-'''
+# [[plugins]]
+# repo = 'Yggdroot/indentLine'
+# hook_add = '''
+# source ~/.config/nvim/plugins/indentline.vim
+# '''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
@@ -209,18 +209,11 @@ source ~/.config/nvim/plugins/easymotion.vim
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
-# LSP
-# [[plugins]]
-# repo = 'prabirshrestha/async.vim'
-
-# [[plugins]]
-# repo = 'prabirshrestha/vim-lsp'
-# hook_add = '''
-# source ~/.config/nvim/plugins/vim-lsp.vim
-# '''
-
-# [[plugins]]
-# repo = 'lighttiger2505/deoplete-vim-lsp'
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/memolist.vim
+'''
 
 # colorscheme=========================================
 # [[plugins]]
