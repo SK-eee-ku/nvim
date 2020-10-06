@@ -6,7 +6,7 @@ let g:vimtex_imaps_enabled=0
 " set fillchars=fold:\ 
 
 
-let g:vim_fravor='latex'
+let g:tex_fravor='latex'
 
 let g:vimtex_compiler_latexmk = {
     \ 'build_dir' : '',
