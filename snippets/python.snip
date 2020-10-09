@@ -7,3 +7,19 @@ options     head
   plt.rcParams["legend.edgecolor"] = 'black'
   plt.rcParams["legend.framealpha"] = 1
   plt.rcParams["legend.fancybox"] = False
+  ${0:TARGET}
+
+
+snippet     jprcparms
+abbr        Set rcParms Japanese version
+options     head
+  from matplotlib.font_manager import FontProperties
+
+  font_prop = FontProperties(fname='/home/skondo/.fonts/TakaoPGothic.ttf')
+  plt.rcParams["font.family"] = font_prop.get_name()
+  plt.rcParams["xtick.direction"] = "in"
+  plt.rcParams["ytick.direction"] = "in"
+  plt.rcParams["legend.edgecolor"] = 'black'
+  plt.rcParams["legend.framealpha"] = 1
+  plt.rcParams["legend.fancybox"] = False
+  ${0:TARGET}
