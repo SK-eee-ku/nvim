@@ -2,6 +2,8 @@ filetype plugin indent off
 " map space to leader
 let mapleader = "\<Space>"
 
+let OSTYPE=substitute(system("uname"), '\n', '', 'g')
+
 "plugin settings
 let s:cache_home = expand('~/.config/nvim')
 let s:dein_dir = s:cache_home . '/dein'
@@ -61,7 +63,9 @@ set sessionoptions-=buffers
 set encoding=utf-8 fileencodings=utf-8,ios-2022-jp,euc-jp,sjis,cp932
 
 " use gui colors
-" set termguicolors
+if OSTYPE != "Darwin"
+  set termguicolors
+endif
 
 " assign temporary file
 set backupdir=~/.config/nvim/tmp//
