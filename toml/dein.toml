@@ -108,8 +108,6 @@ source ~/.config/nvim/plugins/nerdcommenter.vim
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'godlygeek/tabular'
 
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
