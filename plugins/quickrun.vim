@@ -16,6 +16,20 @@ let g:quickrun_config['matlab'] = {
     \ 'exec' : 'cd %s:h;%c %s', 
     \}
 
+let g:quickrun_config["c"]={
+      \ 'type':
+      \ executable('gcc')            ? 'c/gcc' :
+      \ executable('clang')          ? 'c/clang' :
+      \ executable('clang-9')        ? 'c/clang-9' : '',
+      \}
+
+let g:quickrun_config["cpp"]={
+      \ 'type':
+      \ executable('clang++')        ? 'cpp/clang++'  :
+      \ executable('clang++-9')      ? 'cpp/clang++-9'  :
+      \ executable('g++')            ? 'cpp/g++' : '',
+      \}
+
 let g:quickrun_config['cpp/g++']={
       \ 'cmdopt' : '-std=c++17', 
       \}
@@ -23,11 +37,11 @@ let g:quickrun_config['c/gcc']={
       \ 'cmdopt' : '-std=c11', 
       \}
 
-let g:quickrun_config['cpp/clang++']={
+let g:quickrun_config['cpp/clang++-9']={
       \ 'command' : 'clang++-9', 
       \ 'cmdopt' : '-std=c++17', 
       \}
-let g:quickrun_config['c/clang']={
+let g:quickrun_config['c/clang-9']={
       \ 'command' : 'clang-9', 
       \ 'cmdopt' : '-std=c11', 
       \}
@@ -36,7 +50,4 @@ let g:quickrun_config['tex']={
       \ 'type' : 'tex', 
       \ 'command' : 'latexmk', 
       \ 'exec' : '%c %s', 
-      \}
-let g:quickrun_config['markdown/pandoc']={
-      \ 'cmdopt' : '--katex --to=html5', 
       \}
