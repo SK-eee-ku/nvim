@@ -126,7 +126,7 @@ augroup fileType
   autocmd filetype           csv      setlocal tabstop=4 shiftwidth=4 nowrap noexpandtab
   autocmd filetype           text     setlocal tabstop=4 shiftwidth=4 noet noexpandtab
   autocmd filetype           help     setlocal listchars=tab:\ \  noet
-  autocmd filetype           markdown setlocal tabstop=4 shiftwidth=4 noet noexpandtab
+  autocmd filetype           markdown setlocal tabstop=4 shiftwidth=4 noet noexpandtab nowrap
   autocmd BufNewFile,BufRead *.grg    setlocal nowrap
   autocmd BufNewFile,BufRead *.jl     setf julia
 augroup END
