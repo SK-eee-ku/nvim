@@ -1,6 +1,7 @@
 filetype plugin indent off
 " map space to leader
 let mapleader = "\<Space>"
+" let localleader = "\\"
 
 let OSTYPE=substitute(system("uname"), '\n', '', 'g')
 
@@ -121,7 +122,7 @@ augroup fileType
   autocmd filetype           python   setlocal foldmethod=syntax expandtab
   autocmd filetype           c,cpp    setlocal foldmethod=syntax expandtab
   autocmd filetype           go       setlocal tabstop=4 shiftwidth=4 expandtab | set formatoptions+=r
-  autocmd filetype           tex      setlocal tabstop=4 shiftwidth=4 foldmethod=syntax noexpandtab nowrap
+  autocmd filetype           tex      setlocal tabstop=4 shiftwidth=4 foldmethod=syntax noexpandtab nowrap conceallevel=0
   autocmd filetype           html     setlocal tabstop=4 shiftwidth=4 expandtab nowrap
   autocmd filetype           csv      setlocal tabstop=4 shiftwidth=4 nowrap noexpandtab
   autocmd filetype           text     setlocal tabstop=4 shiftwidth=4 noet noexpandtab
@@ -178,13 +179,11 @@ packadd termdebug
 set mouse=a
 
 " add FileType
-au BufNewFile,BufRead *.plt setfiletype gnuplot
-au BufNewFile,BufRead *.m setfiletype matlab
-au BufNewFile,BufRead *.csv setfiletype csv
-au BufNewFile,BufRead *.toml setfiletype conf
+au BufNewFile,BufRead *.plt   setfiletype gnuplot
+au BufNewFile,BufRead *.m     setfiletype matlab
+au BufNewFile,BufRead *.csv   setfiletype csv
+au BufNewFile,BufRead *.toml  setfiletype conf
 
-" for latex
-" let g:tex_flavor = 'latex'
 
 "==========================================
 "key mapping
@@ -372,9 +371,6 @@ set t_Co=256
 " 分割の位置
 set splitbelow
 set splitright
-
-" texの数式に対する便利？機能の無効化
-let g:vim_conceal=''
 
 " ==================================
 " 追加キーマップ
