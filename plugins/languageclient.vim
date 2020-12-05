@@ -41,9 +41,9 @@ endif
 
 
 
-" if executable(expand('~/go/bin/gopls'))
-"     let g:LanguageClient_serverCommands['go'] = [expand('~/go/bin/gopls')]
-" endif
+if executable(expand('~/go/bin/gopls'))
+    let g:LanguageClient_serverCommands['go'] = [expand('~/go/bin/gopls')]
+endif
 
 " other settings
 let g:LanguageClient_useVirtualText = "CodeLens"
