@@ -9,6 +9,8 @@ let g:LanguageClient_hasSnippetSupport=0
 
 " 言語ごとに設定する
 let g:LanguageClient_serverCommands={}
+
+" c/cpp
 if executable('clangd')
     let g:LanguageClient_serverCommands['c'] = ['clangd']
     let g:LanguageClient_serverCommands['cpp'] = ['clangd']
@@ -17,58 +19,42 @@ elseif executable('clangd-9')
     let g:LanguageClient_serverCommands['cpp'] = ['clangd-9']
 endif
 
-" if executable('pyls')
-"     let g:LanguageClient_serverCommands['python'] = ['pyls']
-" endif
+" python
+if executable('pyls')
+    let g:LanguageClient_serverCommands['python'] = ['pyls']
+endif
 
-" if executable('css-languageserver')
-"     let g:LanguageClient_serverCommands['css'] = ['css-languageserver', '--stdio']
-"     let g:LanguageClient_serverCommands['scss'] = ['css-languageserver', '--stdio']
-"     let g:LanguageClient_serverCommands['sass'] = ['css-languageserver', '--stdio']
-" endif
+" css/typescript
+if executable('css-languageserver')
+    let g:LanguageClient_serverCommands['css'] = ['css-languageserver', '--stdio']
+    let g:LanguageClient_serverCommands['scss'] = ['css-languageserver', '--stdio']
+    let g:LanguageClient_serverCommands['sass'] = ['css-languageserver', '--stdio']
+endif
 
-" if executable(expand('~/go/bin/go-langserver'))
-"     let g:LanguageClient_serverCommands['go'] = [expand('~/go/bin/go-langserver'), '-gocodecompletion']
-" endif
+if executable("typescript-language-server")
+  let g:LanguageClient_serverCommands['javascript']=['typescript-language-server', '--stdio']
+  let g:LanguageClient_serverCommands['typescript']=['typescript-language-server', '--stdio']
+endif
 
+" golang
+if executable(expand('~/go/bin/gopls'))
+    let g:LanguageClient_serverCommands['go'] = ["gopls"]
+endif
+if executable(expand('~/go/bin/go-langserver'))
+    let g:LanguageClient_serverCommands['go'] = [expand('~/go/bin/go-langserver'), '-gocodecompletion']
+endif
+
+" ruby
+if executable("solargraph")
+  let g:LanguageClient_serverCommands['ruby']=['solargraph', 'stdio']
+endif
+
+" julia
 " let g:default_julia_version='1.3'
 " let g:LanguageClient_serverCommands['julia'] =  ['julia', '--startup-file=no', '--history-file=no', '-e', ' using LanguageServer; using Pkg; import StaticLint; import SymbolServer; env_path = dirname(Pkg.Types.Context().env.project_file); debug = false; server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, "", Dict()); server.runlinter = true; run(server);']
 
-" let g:LanguageClient_serverCommands['ruby']=['solargraph', 'stdio']
-
-" let g:LanguageClient_serverCommands['javascript']=['typescript-language-server', '--stdio']
-" let g:LanguageClient_serverCommands['typescript']=['typescript-language-server', '--stdio']
-
-
-
-if executable(expand('~/go/bin/gopls'))
-    let g:LanguageClient_serverCommands['go'] = [expand('~/go/bin/gopls')]
-endif
-
 " other settings
 let g:LanguageClient_useVirtualText = "CodeLens"
-
-" let g:LanguageClient_documentHighlightDisplay =
-"             \ {
-"             \     1: {
-"             \         "name": "Text",
-"             \         "texthl": "SpellRare",
-"             \     },
-"             \     2: {
-"             \         "name": "Read",
-"             \         "texthl": "MatchParen",
-"             \     },
-"             \     3: {
-"             \         "name": "Write",
-"             \         "texthl": "MatchParen",
-"             \     },
-"             \ }
-
-" augroup LanguageClient_config
-"     autocmd!
-"     autocmd User LanguageClientStarted setlocal signcolumn=yes
-"     autocmd User LanguageClientStopped setlocal signcolumn=auto
-" augroup END
 
 function! LC_maps()
     if has_key(g:LanguageClient_serverCommands, &filetype)
@@ -90,4 +76,3 @@ autocmd FileType * call LC_maps()
 "     autocmd!
 "     autocmd CursorHold,CursorHoldI *.c,*.cpp call LanguageClient#textDocument_documentHighlight()
 " augroup END
-

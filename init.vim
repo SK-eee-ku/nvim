@@ -121,7 +121,7 @@ augroup fileType
   autocmd!
   autocmd filetype           python   setlocal foldmethod=syntax expandtab
   autocmd filetype           c,cpp    setlocal foldmethod=syntax expandtab
-  autocmd filetype           go       setlocal tabstop=4 shiftwidth=4 expandtab | set formatoptions+=r
+  autocmd filetype           go       setlocal tabstop=4 shiftwidth=4 noexpandtab | set formatoptions+=r
   autocmd filetype           tex      setlocal tabstop=4 shiftwidth=4 foldmethod=syntax noexpandtab nowrap conceallevel=0
   autocmd filetype           html     setlocal tabstop=4 shiftwidth=4 expandtab nowrap
   autocmd filetype           csv      setlocal tabstop=4 shiftwidth=4 nowrap noexpandtab

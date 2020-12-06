@@ -120,12 +120,12 @@ source ~/.config/nvim/plugins/vim-jsbeautify.vim
 repo = 'https://github.com/qnighy/satysfi.vim'
 on_ft = ['satysfi','saty']
 
-[[plugins]]
-repo = 'https://github.com/fatih/vim-go'
-on_ft = ['go']
-hook_add = '''
-source ~/.config/nvim/plugins/vim-go.vim
-'''
+# [[plugins]]
+# repo = 'https://github.com/fatih/vim-go'
+# on_ft = ['go']
+# hook_add = '''
+# source ~/.config/nvim/plugins/vim-go.vim
+# '''
 
 [[plugins]]
 repo = 'https://github.com/plasticboy/vim-markdown.git'
