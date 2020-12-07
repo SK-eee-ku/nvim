@@ -9,16 +9,9 @@ source ~/.config/nvim/plugins/ale.vim
 on_ft=['python']
 
 
-
-[[plugins]]
-repo = 'Shougo/neco-syntax'
-on_event = 'InsertEnter'
-
 [[plugins]]
 repo='deoplete-plugins/deoplete-zsh'
 on_ft = 'zsh'
-
-
 
 [[plugins]]
 repo = 'hynek/vim-python-pep8-indent'
@@ -34,7 +27,6 @@ on_ft = ['tex','cls']
 hook_source= '''
 source ~/.config/nvim/plugins/vimtex.vim
 '''
-
 
 #ここを参考https://qiita.com/alpaca_taichou/items/056a4c42fe7a928973e6
 
@@ -54,9 +46,9 @@ on_ft = ['c','cpp','python','tex','latex']
 repo = 'https://github.com/hail2u/vim-css3-syntax'
 on_ft = ['html','htm']
 
-[[plugins]]
-repo = 'https://github.com/pangloss/vim-javascript'
-on_ft = ['html','htm', "js"]
+# [[plugins]]
+# repo = 'https://github.com/pangloss/vim-javascript'
+# on_ft = ['html','htm', "js"]
 
 [[plugins]]
 repo = 'https://github.com/kchmck/vim-coffee-script'
@@ -104,10 +96,9 @@ on_ft = ['md']
 repo = 'wokalski/autocomplete-flow'
 on_ft = ['html', 'htm', 'js']
 
-
-[[plugins]]
-repo = 'https://github.com/zeekay/vim-beautify'
-on_ft = ['html', 'htm', 'js']
+# [[plugins]]
+# repo = 'https://github.com/zeekay/vim-beautify'
+# on_ft = ['html', 'htm', 'js']
 
 [[plugins]]
 repo='maksimr/vim-jsbeautify'
@@ -150,21 +141,3 @@ hook_source = 'source ~/.config/nvim/plugins/deoplete-jedi.vim'
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 hook_source = 'source ~/.config/nvim/plugins/jedi-vim.vim'
-
-# [[plugins]]
-# repo = 'zchee/deoplete-clang'
-# on_ft = ['c', 'cpp', 'cmake']
-# hook_source='source ~/.config/nvim/plugins/deoplete-clang.vim'
-# depends=['deoplete.nvim']
-
-# [[plugins]]
-# repo = 'Shougo/deoplete-clangx'
-# hook_source = '''
-# " Change clang binary path
-# call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
-
-# " Change clang options
-# call deoplete#custom#var('clangx', 'default_c_options', '')
-# call deoplete#custom#var('clangx', 'default_cpp_options', '')
-# '''
-# on_ft = ['c','cpp']

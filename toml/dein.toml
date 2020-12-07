@@ -14,6 +14,8 @@ repo = 'Shougo/defx.nvim'
 hook_add = '''
 source ~/.config/nvim/plugins/defx.vim
 '''
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'
@@ -22,59 +24,29 @@ source ~/.config/nvim/plugins/deol.vim
 '''
 
 [[plugins]]
-repo = 'kristijanhusak/defx-git'
-
-[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
 source ~/.config/nvim/plugins/denite.vim
 '''
 
 [[plugins]]
-repo = 'Shougo/unite-outline'
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-[[plugins]]
-repo = 'Shougo/neoyank.vim'
-[[plugins]]
 repo = 'neoclide/denite-git'
 
-# [[plugins]]
-# repo = 'Yggdroot/indentLine'
-# hook_add = '''
-# source ~/.config/nvim/plugins/indentline.vim
-# '''
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet'
 hook_add= '''
 source ~/.config/nvim/plugins/neosnip.vim
 '''
-# on_event = 'InsertEnter'
-# depends = ['neosnippet-snippets']
-
-
-
-# [[plugins]]
-# repo = 'kana/vim-smartinput'
-# hook_add='''
-# source ~/.config/nvim/plugins/smartinput.vim
-# '''
 
 [[plugins]]
-repo = 'osyo-manga/shabadou.vim'
+repo = 'Shougo/neosnippet-snippets'
 
-# [[plugins]] 
-# repo = 'woodyZootopia/flatwhite-vim' 
 
 [[plugins]]
 repo = 'kana/vim-operator-user'
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
-
 [[plugins]]
 repo = 'kana/vim-textobj-user'
 hook_add = '''
@@ -98,16 +70,14 @@ repo = 'airblade/vim-gitgutter'
 hook_add = '''
 source ~/.config/nvim/plugins/gitgutter-fugitive.vim
 '''
+[[plugins]]
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
 hook_add = '''
 source ~/.config/nvim/plugins/nerdcommenter.vim
 '''
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
 
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
@@ -124,7 +94,6 @@ vmap <space>b <Plug>(openbrowser-smart-search)
 
 [[plugins]]
 repo = 'soramugi/auto-ctags.vim'
-
 [[plugins]]
 repo = 'majutsushi/tagbar.git'
 hook_add = '''
@@ -145,14 +114,11 @@ hook_add = '''
 source ~/.config/nvim/plugins/languageclient.vim
 '''
 
-[[plugins]]
-repo = 'Shougo/echodoc.vim'
-hook_add = '''
-source ~/.config/nvim/plugins/echodoc.vim
-'''
-
 # [[plugins]]
-# repo = 'https://github.com/qnighy/satysfi.vim'
+# repo = 'Shougo/echodoc.vim'
+# hook_add = '''
+# source ~/.config/nvim/plugins/echodoc.vim
+# '''
 
 [[plugins]]
 repo = 'ncm2/float-preview.nvim.git'
@@ -164,24 +130,13 @@ source ~/.config/nvim/plugins/float-preview.vim
 [[plugins]]
 repo = 'https://github.com/fuenor/jpmoveword.vim'
 
-[[plugins]]
-repo = 'https://github.com/mattn/sonictemplate-vim'
-
-[[plugins]]
-repo = 'https://github.com/tpope/vim-rhubarb'
-
-[[plugins]]
-repo = 'JuliaEditorSupport/julia-vim'
-
-# [[plugins]] 
-# repo = 'https://github.com/woodyZootopia/gitsession.vim' 
-
-# dein_lazy.tomlに移動
 # [[plugins]]
-# repo = 'https://github.com/dense-analysis/ale'
-# hook_add = '''
-# source ~/.config/nvim/plugins/ale.vim
-# '''
+# repo = 'https://github.com/mattn/sonictemplate-vim'
+
+# [[plugins]]
+# repo = 'https://github.com/tpope/vim-rhubarb'
+
+
 
 [[plugins]]
 repo = 'https://github.com/itchyny/lightline.vim'
@@ -194,9 +149,8 @@ source ~/.config/nvim/plugins/lightline.vim
 repo = 'thinca/vim-quickrun'
 hook_add = 'source ~/.config/nvim/plugins/quickrun.vim'
 
-
-[[plugins]]
-repo = 'cohama/lexima.vim'
+# [[plugins]]
+# repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
