@@ -37,7 +37,7 @@ if executable("typescript-language-server")
 endif
 
 " golang
-if executable(expand('~/go/bin/gopls'))
+if executable(expand('gopls'))
     let g:LanguageClient_serverCommands['go'] = ["gopls"]
 endif
 if executable(expand('~/go/bin/go-langserver'))
