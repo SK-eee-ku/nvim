@@ -3,7 +3,7 @@ let g:vimtex_syntax_conceal_default=''
 " let g:vimtex_imaps_enabled=0
 let g:vimtex_mappings_enabled=0
 
-let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_compiler_progname = 'latexmk'
 let g:vimtex_quickfix_latexlog={'references':0}
 
 let g:vimtex_compiler_latexmk = {

@@ -28,7 +28,12 @@ repo = 'Shougo/denite.nvim'
 hook_add = '''
 source ~/.config/nvim/plugins/denite.vim
 '''
-
+[[plugins]]
+repo = 'Shougo/unite-outline'
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
 [[plugins]]
 repo = 'neoclide/denite-git'
 
@@ -126,7 +131,6 @@ hook_add = '''
 source ~/.config/nvim/plugins/float-preview.vim
 '''
 
-
 [[plugins]]
 repo = 'https://github.com/fuenor/jpmoveword.vim'
 
@@ -149,8 +153,8 @@ source ~/.config/nvim/plugins/lightline.vim
 repo = 'thinca/vim-quickrun'
 hook_add = 'source ~/.config/nvim/plugins/quickrun.vim'
 
-# [[plugins]]
-# repo = 'cohama/lexima.vim'
+[[plugins]]
+repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
