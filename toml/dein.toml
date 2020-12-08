@@ -16,6 +16,10 @@ source ~/.config/nvim/plugins/defx.vim
 '''
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'

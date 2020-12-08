@@ -1,13 +1,27 @@
 call defx#custom#column('indent',{'indent': "- "})
 call defx#custom#column('mark', {
+            \ 'directory_icon': '▸',
+            \ 'opened_icon': '▾',
             \ 'readonly_icon': '✗',
             \ 'root_icon': ' ',
             \ 'selected_icon': '✓',
             \ })
-nnoremap <silent> st        :Defx -new -auto-cd -columns=time:size:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=tab        <CR>
+
+call defx#custom#column('git', 'indicators', {
+            \ 'Modified'  : '✹',
+            \ 'Staged'    : '✚',
+            \ 'Untracked' : '✭',
+            \ 'Renamed'   : '➜',
+            \ 'Unmerged'  : '═',
+            \ 'Ignored'   : '☒',
+            \ 'Deleted'   : '✖',
+            \ 'Unknown'   : '?'
+            \})
+
+nnoremap <silent> st        :Defx -new -auto-cd -columns=time:size:git:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=tab        <CR>
 nnoremap <silent> <leader>d :Defx -new -auto-cd -columns=time:size:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=no         <CR>
-nnoremap <silent> <leader>n :Defx -new -auto-cd -columns=time:size:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=40 <CR>
-nnoremap <silent> <leader>z :Defx -new -auto-cd -columns=size:indent:filename:time      -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=floating <CR>
+nnoremap <silent> <leader>n :Defx -new -auto-cd -columns=:git:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=40 -direction='topleft'<CR>
+nnoremap <silent> <leader>z :Defx -new -auto-cd -columns=mark:indent:filename:time      -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=floating <CR>
 " seldom used
 " nnoremap <silent> <leader>dv :Defx -new -auto-cd -columns=size:mark:filename:time -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=50<CR>:IndentLinesDisable<CR>
 
