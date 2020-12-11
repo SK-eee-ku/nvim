@@ -2,8 +2,8 @@ snippet     eqnonumber
 options     head
     \[
         ${1:TARGET}
-    \]${0:TARGET}
-
+    \]
+    ${0:TARGET}
 
 snippet     \sum
 alias       sum \sum{
@@ -15,7 +15,7 @@ alias       matrm \mathrm{
     \mathrm{${1:TARGET}}${0:TARGET}
 
 snippet     \intInf
-alias       intInf \intImf{
+alias       intInf \intInf{
 abbr        integralInf2Inf
 # options     word
     \int_{\infty}^{\infty} ${1:TARGET}

@@ -19,7 +19,7 @@ call defx#custom#column('git', 'indicators', {
             \})
 
 nnoremap <silent> st        :Defx -new -auto-cd -columns=time:size:git:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=tab        <CR>
-nnoremap <silent> <leader>d :Defx -new -auto-cd -columns=time:size:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=no         <CR>
+nnoremap <silent> <leader>d :Defx -new -auto-cd -columns=time:size:git:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=no         <CR>
 nnoremap <silent> <leader>n :Defx -new -auto-cd -columns=:git:mark:indent:filename -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=40 -direction='topleft'<CR>
 nnoremap <silent> <leader>z :Defx -new -auto-cd -columns=mark:indent:filename:time      -show-ignored-files `expand('%:p:h')` -search=`expand('%:p')` -split=floating <CR>
 " seldom used

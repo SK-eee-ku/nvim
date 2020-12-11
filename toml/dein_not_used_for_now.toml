@@ -13,10 +13,6 @@ source ~/.config/nvim/plugins/airline.vim
 '''
 
 [[plugins]]
-repo = 'davidhalter/jedi'
-on_ft = 'python'
-
-[[plugins]]
 repo = 'https://github.com/woodyZootopia/gitsession.nvim'
 
 
