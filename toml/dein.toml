@@ -103,6 +103,9 @@ vmap <space>b <Plug>(openbrowser-smart-search)
 
 [[plugins]]
 repo = 'soramugi/auto-ctags.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/auto-ctags.vim
+'''
 [[plugins]]
 repo = 'majutsushi/tagbar.git'
 hook_add = '''

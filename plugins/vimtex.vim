@@ -20,3 +20,6 @@ call deoplete#custom#var('omni', 'input_patterns', {
 nmap <localleader>ll  <Plug>(vimtex-compile)
 nmap <localleader>lt  <Plug>(vimtex-toc-toggle)
 nmap <localleader>ls  <Plug>(vimtex-status-all)
+
+let g:vimtex_quickfix_latexlog = {'general' : 0}
+
