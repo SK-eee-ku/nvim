@@ -4,9 +4,9 @@ let g:ale_lint_on_text_changed=1
 let g:ale_lint_on_enter=0
 let g:ale_open_list=0
 
-nnoremap <leader>ap :ALEFix<CR>
-nnoremap <leader>al :ALELint<CR>
-nnoremap <leader>ak :ALEDetail<CR>
+nnoremap <leader>lf :ALEFix<CR>
+nnoremap <leader>ll :ALELint<CR>
+nnoremap <leader>li :ALEDetail<CR>
 nnoremap ]a :ALENext<CR>
 nnoremap [a :ALEPrevious<CR>
 
@@ -21,7 +21,7 @@ let g:ale_linters={
       \}
 
 let g:ale_python_flake8_executable= g:python3_host_prog
-let g:ale_python_flake8_options = '-m flake8 --import-order-style google --max-line-length 99'
+let g:ale_python_flake8_options = '-m flake8 --import-order-style pep8 --max-line-length 99 --ignore=E203,W503,W504'
 let g:ale_python_autopep8_executable = g:python3_host_prog
 let g:ale_python_autopep8_options = '-m autopep8'
 let g:ale_python_isort_executable = g:python3_host_prog
